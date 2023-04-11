@@ -1,0 +1,20 @@
+#!/bin/bash
+
+function for()
+{
+    start=$1
+    end=$2
+    
+    for((i = $start; i < $end; i++)); do
+        echo -n "$i"
+        
+        if(($i == $end - 1)); then
+            echo -n "st"
+        else
+            echo -n "st, "
+        fi
+    done
+}
+
+
+"$@"

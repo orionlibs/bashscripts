@@ -1,0 +1,23 @@
+#!/bin/bash
+
+function commandHistory()
+{
+    history
+}
+
+
+function setHistorySize()
+{
+    newHistorySize=$1
+    HISTSIZE=$newHistorySize
+}
+
+
+function unsetVariable()
+{
+    variableToUnset=$1
+    unset $variableToUnset
+}
+
+
+"$@"

@@ -1,0 +1,15 @@
+#!/bin/bash
+DirToCompress=$1
+ArchiveFileName=$2
+
+if [ "${DirToCompress}" = "" ] ; then
+    DirToCompress=`pwd`
+fi
+
+cd ${DirToCompress}
+
+if [ "${ArchiveFileName}" = "" ] ; then
+    ArchiveFileName="archive.7z"
+fi
+
+7z a -m0=LZMA2 -mx=9 "${ArchiveFileName}"

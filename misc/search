@@ -1,0 +1,9 @@
+#!/bin/bash
+DirToSearchIn=$1
+SearchPattern=$2
+
+if [ "${DirToSearchIn}" = "" ] ; then
+    DirToSearchIn=`pwd`
+fi
+
+find "${DirToSearchIn}" -name "${SearchPattern}"

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+function type()
+{
+    fileName=$1
+    file $fileName
+}
+
+
+"$@"

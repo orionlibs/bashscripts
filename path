@@ -1,0 +1,12 @@
+#!/bin/bash
+
+function addPath()
+{
+    pathToAdd=$1
+    export PATH="$pathToAdd:$PATH"
+    source /etc/bash.bashrc
+    echo "path added"
+}
+
+
+"$@"

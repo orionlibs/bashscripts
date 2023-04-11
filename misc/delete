@@ -1,0 +1,9 @@
+#!/bin/bash
+DirFromWhichToDeleteFilesAndDirs=$1
+SearchPattern=$2
+
+if [ "${DirFromWhichToDeleteFilesAndDirs}" = "" ] ; then
+    DirFromWhichToDeleteFilesAndDirs=`pwd`
+fi
+
+find "${DirFromWhichToDeleteFilesAndDirs}" -name "${SearchPattern}" | xargs rm -rf

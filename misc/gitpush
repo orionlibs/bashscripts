@@ -1,0 +1,17 @@
+#!/bin/bash
+CommitDir=$1
+CommitMessage=$2
+
+if [ "${CommitDir}" = "" ] ; then
+	CommitDir=`pwd`
+fi
+
+cd ${CommitDir}
+
+if ["${CommitMessage}" = ""] ; then
+	CommitMessage="new commit"
+fi
+
+git add -A
+git commit -a -m "${CommitMessage}"
+git push

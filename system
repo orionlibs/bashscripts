@@ -1,0 +1,33 @@
+#!/bin/bash
+
+function kernelName()
+{
+    uname
+}
+
+
+function operatingSystemName()
+{
+    uname -o
+}
+
+
+function hardwarePlatform()
+{
+    uname --hardware-platform
+}
+
+
+function cpuName()
+{
+    uname -p
+}
+
+
+function allInfo()
+{
+    uname -a
+}
+
+
+"$@"

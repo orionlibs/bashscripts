@@ -1,0 +1,17 @@
+#!/bin/bash
+
+function countWords()
+{
+    filename=$1
+    wc -w $filename
+}
+
+
+function countBytes()
+{
+    filename=$1
+    wc -c $filename
+}
+
+
+"$@"
